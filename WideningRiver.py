@@ -25,7 +25,7 @@ def fwd_euler(t, S):
         S[i] = S[i-1] - del_t*(5/2*np.sign(S[i-1])*np.abs(S[i-1])**(12/5))
     return S
 
-#plot ananlytic solution 
+#plot analytic solution 
 S_analytic = np.zeros([n])
 S_an2 = np.zeros([n])
 for i in range (0,n):
