@@ -3,41 +3,39 @@ import numpy as np
 from matplotlib import pyplot as plt 
 import math
 
-#numerical method to implement on equation 21 from Moulins.pdf by Neufeld and Devauchelle
+#numerical method to implement equation 21 from Moulins.pdf by Neufeld and Devauchelle
 
 n = 10000 #num of steps 
 #assuming t0 = 0
-xf = 10
-del_x = xf/n #step size, assuming uniform
-h_o = 2 #initial slope 
-x_o = 1 #initial position
+tf = 10
+del_t = tf/n #step size, assuming uniform
+H_o = 2 #initial H
+H_prime_o = 5 #initial derivative
 
-x = np.linspace(0, xf, n)
-h = np.zeros([n])
-h[0] = h_o
-ep = 10**(-5)
+t = np.linspace(0, tf, n)
+H = np.zeros([n])
+H[0] = H_o
+H_prime = np.zeros([n])
+H_prime[0] = H_prime_o
 
-def fwd_euler(x,h):
+def fwd_euler(t,h):
     for i in range (1, n):
-        h[i] = h[i-1] + del_x*(2**5)/((h_o - h[i-1]+ep)**5) - (math.sqrt(h_o**2 + 4*(2*h_o**2 + 5*ep*(x[i]-x_o)))-h_o)/(2)
+        h[i] = h[i-1] + del_t*5/2*h**(11/5)*(1-h)
     return h
 
-#plot analytic solution 
-h_analytic = np.zeros([n])
-for i in range (0,n):
-    h_analytic[i] = h_o -2*3**(1/6)*(-x[i]+x_o)**(1/6)
+H_prime = fwd_euler(t, H_prime)
 
-h_approx = fwd_euler(x, h)
-print (x , "\n" , h)
+for i in range (1,n):
+    H[i] = H[i-1] + del_t*H_prime[i]
+print (t , "\n" , H)
 
 fig, ax = plt.subplots()
-plt_analytic = ax.plot(x, h_analytic, '-', label="Analytic Solution")
-plt_approx = ax.plot(x, h_approx, '--', label = "Numerical approximation with Forward Euler")
-ax.legend( ["Analytic Solution","Numerical approximation with Forward Euler Method"])
+plt_approx = ax.plot(x, H, '--', label = "Numerical approximation with Forward Euler")
+ax.legend( ["Numerical approximation with Forward Euler Method"])
 
 plt.xlabel("position [dimensionless]")
 plt.ylabel("depth [dimensionless]")
-plt.title("Euler Fwd on Adiabatic River Case")
+plt.title("Euler Fwd on Receding River Case")
 plt.show()
 
 

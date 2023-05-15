@@ -7,7 +7,7 @@ Created on Tue May  9 10:54:56 2023
 import numpy as np
 from matplotlib import pyplot as plt 
 
-#numerical method to implement on equation 21 from Moulins.pdf by Neufeld and Devauchelle
+#numerical method to implement equation 21 from Moulins.pdf by Neufeld and Devauchelle
 #given that the widening river is an ODE of S: dS/dt = -5/2 S^(12/5)
 
 n = 10000 #num of steps 
