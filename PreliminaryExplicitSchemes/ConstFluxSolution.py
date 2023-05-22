@@ -34,17 +34,31 @@ x = np.linspace(x_0,x_f, n_x)
 
 h_xt =np.zeros([n_t,n_x])
 h_xt[0] = h_in #initial distribution
-h_x = np.zeros([n_t]) #h_x at x = x_o for all t, need another relation to forward step this 
+
+h_x = np.zeros([4,n_t]) #h_x at x = x_o for all t, need another relation to forward step this 
+
 h_x_t = np.zeros([n_t-1]) #derivative of h_x wrt to t
 
-xi = np.zeros([n_t]) 
-xi[0] = -np.power(a,-1/5)
-h_x[0] = -a
+xi = np.zeros([4,n_t]) 
+
+xi[0][0] = -np.power(0.01,-1/5)
+xi[1][0] = -np.power(0.1,-1/5)
+xi[2][0] = -np.power(1,-1/5)
+xi[3][0] = -np.power(2,-1/5)
+
+
+h_x[0][0] = -0.01
+h_x[1][0] = -0.1
+h_x[2][0] = -1
+h_x[3][0] = -2
 
 for i in range (1, n_t):
-    xi[i] = xi[i-1] + del_t*(h_t/5 -1/2*(xi[i-1])**(-6)) #gives xi which is h_x^(-1/5)
-    h_x[i] = np.power(xi[i],-5) #construct how slope varies with time, slope is spatially invariant
+    for k in range (0,4):
+        xi[k][i]= xi[k][i-1] + del_t*(h_t/5 -1/2*(xi[k][i-1])**(-6)) #gives xi which is h_x^(-1/5)
+        h_x[k][i]= np.power(xi[k][i],-5) #construct how slope varies with time, slope is spatially invariant
+    
 
+'''
 for i in range (1, n_t):
     #find boundary condition for x = x_o from the derivative flux condition - i.e. find how the h(x_o) evloves in time
     h_xt[i][0] = h_xt[i-1][0] -  h_t*del_t
@@ -52,6 +66,8 @@ for i in range (1, n_t):
 for i in range (0, n_t): 
     for j in range (1, n_x): #spatial index
         h_xt[i][j] = h_xt[i][j-1] + h_x[i]*del_x #evolves slope along the same curve
+
+'''
 '''
 for i in range (0, n_t-1):
     for k in range (1, n_t-1):
@@ -61,18 +77,21 @@ for i in range (0, n_t-1):
         #double check that this is true 
 '''
 fig, ax = plt.subplots()
-#plt_approx = ax.plot(t, H_prime, '--', label = "Numerical approximation with Forward Euler")
-plt_i = ax.plot(x, h_xt[0], label = "initial profile")
+plt_der1 = ax.plot(t, h_x[0], '--', label = "Numerical approximation with Forward Euler")
+plt_der = ax.plot(t, h_x[1], '--', label = "Numerical approximation with Forward Euler")
+plt_der2 = ax.plot(t, h_x[2], '--', label = "Numerical approximation with Forward Euler")
+plt_der3 = ax.plot(t, h_x[3], '--', label = "Numerical approximation with Forward Euler")
+#plt_i = ax.plot(x, h_xt[0], label = "initial profile")
 #plt_xi = ax.plot(t, xi, label = "xi")
-plt_2 = ax.plot(x, h_xt[int(n_t/10)], label = "initial profile")
-plt_3 = ax.plot(x, h_xt[int(n_t/5)], label = "initial profile")
-plt_half = ax.plot(x, h_xt[int(n_t/2)], label = "profile2")
-plt_final = ax.plot(x, h_xt[int(n_t)-1], label = "initial profile")
+#plt_2 = ax.plot(x, h_xt[int(n_t/10)], label = "initial profile")
+#plt_3 = ax.plot(x, h_xt[int(n_t/5)], label = "initial profile")
+#plt_half = ax.plot(x, h_xt[int(n_t/2)], label = "profile2")
+#plt_final = ax.plot(x, h_xt[int(n_t)-1], label = "initial profile")
 
 #ax.legend( ["Numerical approximation of h_x"])
-ax.legend( ["t = 0","t = 0.2", "t = 0.4", "t = 1", "t = 2"] )
+ax.legend( ["a = 0.01","a = 0.1", "a=1", "a = 2"] )
 
-plt.xlabel("x [dimensionless]")
-plt.ylabel("h [dimensionless]")
-plt.title("Euler Fwd on h")
+plt.xlabel("t [dimensionless]")
+plt.ylabel("h_x [dimensionless]")
+plt.title("Euler Fwd on h_x")
 plt.show()
