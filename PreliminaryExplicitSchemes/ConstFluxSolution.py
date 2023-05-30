@@ -41,16 +41,16 @@ h_x_t = np.zeros([n_t-1]) #derivative of h_x wrt to t
 
 xi = np.zeros([4,n_t]) 
 
-xi[0][0] = -np.power(0.01,-1/5)
-xi[1][0] = -np.power(0.1,-1/5)
-xi[2][0] = -np.power(1,-1/5)
-xi[3][0] = -np.power(2,-1/5)
+xi[0][0] = -np.power(0.1,-1/5)
+xi[1][0] = -np.power(1,-1/5)
+xi[2][0] = -np.power(2,-1/5)
+xi[3][0] = -np.power(3,-1/5)
 
 
-h_x[0][0] = -0.01
-h_x[1][0] = -0.1
-h_x[2][0] = -1
-h_x[3][0] = -2
+h_x[0][0] = -0.1
+h_x[1][0] = -1
+h_x[2][0] = -2
+h_x[3][0] = -3
 
 for i in range (1, n_t):
     for k in range (0,4):
@@ -89,7 +89,7 @@ plt_der3 = ax.plot(t, h_x[3], '--', label = "Numerical approximation with Forwar
 #plt_final = ax.plot(x, h_xt[int(n_t)-1], label = "initial profile")
 
 #ax.legend( ["Numerical approximation of h_x"])
-ax.legend( ["a = 0.01","a = 0.1", "a=1", "a = 2"] )
+ax.legend( ["a = 0.1","a = 1", "a=2", "a = 3"] )
 
 plt.xlabel("t [dimensionless]")
 plt.ylabel("h_x [dimensionless]")
