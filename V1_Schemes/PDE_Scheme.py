@@ -44,6 +44,6 @@ def incising (S, h, t, x, ep):
     
     for j in range (1,n_t):
         for i in range (1, n_x):
-            h[i][j] = h[i][j-1] + del_t*(np.power(abs(S[i-1][j-1]), 6/5))/np.sqrt(1+ S[i-1][j-1]**2)
+            h[i][j] = h[i][j-1] - del_t*(np.power(abs(S[i-1][j]), 6/5))/np.sqrt(1+ S[i-1][j]**2)
             S[i][j] = (h[i][j] - h[i-1][j])/del_x 
     return (S, h)
