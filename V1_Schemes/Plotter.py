@@ -37,7 +37,7 @@ def plot_h_t_int(h, x, t, t_intervals):
     for plt_time in range (0, len(h_ints)):
         h_plt = ax.plot(x, h_ints[plt_time]) #all the times plotted
   
-    ax.legend(time_label) #there may be an issue with global permissions for this to show up 
+    ax.legend(time_label) 
 
     plt.xlabel("x [dimensionless]")
     plt.ylabel("h [dimensionless]")
