@@ -1,0 +1,10 @@
+Q = 1e-4;
+h_eta = linspace(1e-9, 1e-2, 1000);
+t_eta = linspace(0, 220, 1000);
+const = 5*Q^(-2/5).*0.0290;
+h_eta_pow = (h_eta.^(11/5));
+t_eta_pow = t_eta.^(-1/2);
+h_eta_pow2 = (h_eta).^(1/5);
+q2 = Q^(3/5);
+inner = (q2*h_eta_pow2 + 1/2*0.0290*t_eta_pow);
+h_eta_2 = const.*h_eta_pow.*((t_eta_pow')*inner);

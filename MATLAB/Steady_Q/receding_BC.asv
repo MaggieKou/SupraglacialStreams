@@ -1,0 +1,5 @@
+function h_x_0 = receding_BC(h_init, S_init, v)
+%given scalar h_in and S_in, we march forward as an ODE with S_t = 5/2vS(1-S^2)^4/5(sqrt(1+S^2) + 1/v*S)
+h_x_0 = 
+
+end

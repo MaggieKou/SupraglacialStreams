@@ -1,0 +1,344 @@
+GNU gdb (Ubuntu 9.2-0ubuntu1~20.04.1) 9.2
+Copyright (C) 2020 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word".
+[New LWP 76700]
+[New LWP 76701]
+[New LWP 76702]
+[New LWP 76703]
+[New LWP 76704]
+[New LWP 76715]
+[New LWP 76716]
+[New LWP 76717]
+[New LWP 76718]
+[New LWP 76720]
+[New LWP 76721]
+[New LWP 76723]
+[New LWP 76724]
+[New LWP 76728]
+[New LWP 76733]
+[New LWP 76734]
+[New LWP 76753]
+[New LWP 76754]
+[New LWP 76755]
+[New LWP 76756]
+[New LWP 76757]
+[New LWP 76758]
+[New LWP 76760]
+[New LWP 76819]
+[New LWP 76844]
+[New LWP 76845]
+[New LWP 76846]
+[New LWP 76847]
+[New LWP 76848]
+[New LWP 78136]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+0x00007f4f75837c7f in __GI___wait4 (pid=78166, stat_loc=0x0, options=0, 
+    usage=0x0) at ../sysdeps/unix/sysv/linux/wait4.c:27
+
+Stack backtrace
+---------------
+    usage=0x0) at ../sysdeps/unix/sysv/linux/wait4.c:27
+        resultvar = 18446744073709551104
+        sc_cancel_oldtype = 0
+        sc_ret = <optimized out>
+#1  0x00007f4f3c023224 in ?? ()
+   from /usr/lib/python3/dist-packages/cysignals/signals.cpython-38-x86_64-linux-gnu.so
+No symbol table info available.
+#2  0x00007f4f3c023366 in ?? ()
+   from /usr/lib/python3/dist-packages/cysignals/signals.cpython-38-x86_64-linux-gnu.so
+No symbol table info available.
+#3  0x00007f4f3c025d5f in ?? ()
+   from /usr/lib/python3/dist-packages/cysignals/signals.cpython-38-x86_64-linux-gnu.so
+No symbol table info available.
+#4  <signal handler called>
+No locals.
+#5  0x00007f4f65141ae2 in ?? () from /lib/x86_64-linux-gnu/libQt5Gui.so.5
+No symbol table info available.
+#6  0x00007f4f65414c0a in QPainter::setBrushOrigin(QPointF const&) ()
+   from /lib/x86_64-linux-gnu/libQt5Gui.so.5
+No symbol table info available.
+#7  0x00007f4f65a41d0e in QItemDelegate::drawBackground(QPainter*, QStyleOptionViewItem const&, QModelIndex const&) const ()
+   from /lib/x86_64-linux-gnu/libQt5Widgets.so.5
+No symbol table info available.
+#8  0x00007f4f65a44cef in QItemDelegate::paint(QPainter*, QStyleOptionViewItem const&, QModelIndex const&) const ()
+   from /lib/x86_64-linux-gnu/libQt5Widgets.so.5
+No symbol table info available.
+#9  0x00007f4f65f95589 in ?? ()
+   from /usr/lib/python3/dist-packages/PyQt5/QtWidgets.cpython-38-x86_64-linux-gnu.so
+No symbol table info available.
+#10 0x00007f4f65a71680 in ?? () from /lib/x86_64-linux-gnu/libQt5Widgets.so.5
+No symbol table info available.
+#11 0x00007f4f65a7830f in QTableView::paintEvent(QPaintEvent*) ()
+   from /lib/x86_64-linux-gnu/libQt5Widgets.so.5
+No symbol table info available.
+#12 0x00007f4f65eb7e2b in ?? ()
+   from /usr/lib/python3/dist-packages/PyQt5/QtWidgets.cpython-38-x86_64-linux-gnu.so
+No symbol table info available.
+#13 0x00007f4f657f82b6 in QWidget::event(QEvent*) ()
+   from /lib/x86_64-linux-gnu/libQt5Widgets.so.5
+No symbol table info available.
+#14 0x00007f4f658a5d52 in QFrame::event(QEvent*) ()
+   from /lib/x86_64-linux-gnu/libQt5Widgets.so.5
+No symbol table info available.
+#15 0x00007f4f65a2a482 in QAbstractItemView::viewportEvent(QEvent*) ()
+   from /lib/x86_64-linux-gnu/libQt5Widgets.so.5
+No symbol table info available.
+#16 0x00007f4f65e9874b in ?? ()
+   from /usr/lib/python3/dist-packages/PyQt5/QtWidgets.cpython-38-x86_64-linux-gnu.so
+No symbol table info available.
+#17 0x00007f4f68e8a51b in QCoreApplicationPrivate::sendThroughObjectEventFilters(QObject*, QEvent*) () from /lib/x86_64-linux-gnu/libQt5Core.so.5
+No symbol table info available.
+#18 0x00007f4f657b5a55 in QApplicationPrivate::notify_helper(QObject*, QEvent*) () from /lib/x86_64-linux-gnu/libQt5Widgets.so.5
+No symbol table info available.
+#19 0x00007f4f657bf0f0 in QApplication::notify(QObject*, QEvent*) ()
+   from /lib/x86_64-linux-gnu/libQt5Widgets.so.5
+No symbol table info available.
+#20 0x00007f4f660bcbf6 in ?? ()
+   from /usr/lib/python3/dist-packages/PyQt5/QtWidgets.cpython-38-x86_64-linux-gnu.so
+No symbol table info available.
+#21 0x00007f4f68e8a80a in QCoreApplication::notifyInternal2(QObject*, QEvent*)
+    () from /lib/x86_64-linux-gnu/libQt5Core.so.5
+No symbol table info available.
+#22 0x00007f4f657f0f4a in QWidgetPrivate::sendPaintEvent(QRegion const&) ()
+   from /lib/x86_64-linux-gnu/libQt5Widgets.so.5
+No symbol table info available.
+#23 0x00007f4f657f1799 in QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) ()
+   from /lib/x86_64-linux-gnu/libQt5Widgets.so.5
+No symbol table info available.
+#24 0x00007f4f657f2423 in QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) () from /lib/x86_64-linux-gnu/libQt5Widgets.so.5
+No symbol table info available.
+#25 0x00007f4f657f2306 in QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) () from /lib/x86_64-linux-gnu/libQt5Widgets.so.5
+No symbol table info available.
+#26 0x00007f4f657f2306 in QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) () from /lib/x86_64-linux-gnu/libQt5Widgets.so.5
+No symbol table info available.
+#27 0x00007f4f657f2306 in QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) () from /lib/x86_64-linux-gnu/libQt5Widgets.so.5
+No symbol table info available.
+#28 0x00007f4f657f2306 in QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) () from /lib/x86_64-linux-gnu/libQt5Widgets.so.5
+No symbol table info available.
+#29 0x00007f4f657f2306 in QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) () from /lib/x86_64-linux-gnu/libQt5Widgets.so.5
+No symbol table info available.
+#30 0x00007f4f657f14a4 in QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) ()
+   from /lib/x86_64-linux-gnu/libQt5Widgets.so.5
+No symbol table info available.
+#31 0x00007f4f657f2423 in QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) () from /lib/x86_64-linux-gnu/libQt5Widgets.so.5
+No symbol table info available.
+#32 0x00007f4f657f2306 in QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) () from /lib/x86_64-linux-gnu/libQt5Widgets.so.5
+No symbol table info available.
+#33 0x00007f4f657f2306 in QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) () from /lib/x86_64-linux-gnu/libQt5Widgets.so.5
+No symbol table info available.
+#34 0x00007f4f657f2306 in QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) () from /lib/x86_64-linux-gnu/libQt5Widgets.so.5
+No symbol table info available.
+#35 0x00007f4f657f14a4 in QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) ()
+   from /lib/x86_64-linux-gnu/libQt5Widgets.so.5
+No symbol table info available.
+#36 0x00007f4f657f2423 in QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) () from /lib/x86_64-linux-gnu/libQt5Widgets.so.5
+No symbol table info available.
+#37 0x00007f4f657f14a4 in QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) ()
+   from /lib/x86_64-linux-gnu/libQt5Widgets.so.5
+No symbol table info available.
+#38 0x00007f4f657f2423 in QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) () from /lib/x86_64-linux-gnu/libQt5Widgets.so.5
+No symbol table info available.
+#39 0x00007f4f657f2306 in QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) () from /lib/x86_64-linux-gnu/libQt5Widgets.so.5
+No symbol table info available.
+#40 0x00007f4f657f2306 in QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) () from /lib/x86_64-linux-gnu/libQt5Widgets.so.5
+No symbol table info available.
+#41 0x00007f4f657f14a4 in QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) ()
+   from /lib/x86_64-linux-gnu/libQt5Widgets.so.5
+No symbol table info available.
+#42 0x00007f4f657c7bfc in ?? () from /lib/x86_64-linux-gnu/libQt5Widgets.so.5
+No symbol table info available.
+#43 0x00007f4f657c83da in ?? () from /lib/x86_64-linux-gnu/libQt5Widgets.so.5
+No symbol table info available.
+#44 0x00007f4f658168dc in ?? () from /lib/x86_64-linux-gnu/libQt5Widgets.so.5
+No symbol table info available.
+#45 0x00007f4f658172d0 in ?? () from /lib/x86_64-linux-gnu/libQt5Widgets.so.5
+No symbol table info available.
+#46 0x00007f4f657b5a66 in QApplicationPrivate::notify_helper(QObject*, QEvent*) () from /lib/x86_64-linux-gnu/libQt5Widgets.so.5
+No symbol table info available.
+#47 0x00007f4f657bf0f0 in QApplication::notify(QObject*, QEvent*) ()
+   from /lib/x86_64-linux-gnu/libQt5Widgets.so.5
+No symbol table info available.
+#48 0x00007f4f660bcbf6 in ?? ()
+   from /usr/lib/python3/dist-packages/PyQt5/QtWidgets.cpython-38-x86_64-linux-gnu.so
+No symbol table info available.
+#49 0x00007f4f68e8a80a in QCoreApplication::notifyInternal2(QObject*, QEvent*)
+    () from /lib/x86_64-linux-gnu/libQt5Core.so.5
+No symbol table info available.
+#50 0x00007f4f65187de6 in QGuiApplicationPrivate::processExposeEvent(QWindowSystemInterfacePrivate::ExposeEvent*) ()
+   from /lib/x86_64-linux-gnu/libQt5Gui.so.5
+No symbol table info available.
+#51 0x00007f4f65188014 in QGuiApplicationPrivate::processWindowSystemEvent(QWindowSystemInterfacePrivate::WindowSystemEvent*) ()
+   from /lib/x86_64-linux-gnu/libQt5Gui.so.5
+No symbol table info available.
+#52 0x00007f4f6516235b in QWindowSystemInterface::sendWindowSystemEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /lib/x86_64-linux-gnu/libQt5Gui.so.5
+No symbol table info available.
+#53 0x00007f4f5fae332e in ?? () from /lib/x86_64-linux-gnu/libQt5XcbQpa.so.5
+No symbol table info available.
+#54 0x00007f4f685c417d in g_main_context_dispatch ()
+   from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#55 0x00007f4f685c4400 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#56 0x00007f4f685c44a3 in g_main_context_iteration ()
+   from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#57 0x00007f4f68ee2435 in QEventDispatcherGlib::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /lib/x86_64-linux-gnu/libQt5Core.so.5
+No symbol table info available.
+#58 0x00007f4f68e893ab in QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) () from /lib/x86_64-linux-gnu/libQt5Core.so.5
+No symbol table info available.
+#59 0x00007f4f68e91116 in QCoreApplication::exec() ()
+   from /lib/x86_64-linux-gnu/libQt5Core.so.5
+No symbol table info available.
+#60 0x00007f4f6607d9c1 in ?? ()
+   from /usr/lib/python3/dist-packages/PyQt5/QtWidgets.cpython-38-x86_64-linux-gnu.so
+No symbol table info available.
+#61 0x00000000005f652a in PyCFunction_Call ()
+No symbol table info available.
+#62 0x00000000005f7056 in _PyObject_MakeTpCall ()
+No symbol table info available.
+#63 0x000000000057107e in _PyEval_EvalFrameDefault ()
+No symbol table info available.
+#64 0x00000000005f6836 in _PyFunction_Vectorcall ()
+No symbol table info available.
+#65 0x000000000056b9fd in _PyEval_EvalFrameDefault ()
+No symbol table info available.
+#66 0x00000000005f6836 in _PyFunction_Vectorcall ()
+No symbol table info available.
+#67 0x0000000000570ac2 in _PyEval_EvalFrameDefault ()
+No symbol table info available.
+#68 0x00000000005f6836 in _PyFunction_Vectorcall ()
+No symbol table info available.
+#69 0x000000000056b9fd in _PyEval_EvalFrameDefault ()
+No symbol table info available.
+#70 0x0000000000569cea in _PyEval_EvalCodeWithName ()
+No symbol table info available.
+#71 0x000000000068e7b7 in PyEval_EvalCode ()
+No symbol table info available.
+#72 0x0000000000680001 in ?? ()
+No symbol table info available.
+#73 0x000000000068007f in ?? ()
+No symbol table info available.
+#74 0x0000000000680121 in ?? ()
+No symbol table info available.
+#75 0x0000000000680db7 in PyRun_SimpleFileExFlags ()
+No symbol table info available.
+#76 0x00000000006b8122 in Py_RunMain ()
+No symbol table info available.
+#77 0x00000000006b84ad in Py_BytesMain ()
+No symbol table info available.
+#78 0x00007f4f75779083 in __libc_start_main (main=0x4ef1e0 <main>, argc=2, 
+    argv=0x7ffdd5fced08, init=<optimized out>, fini=<optimized out>, 
+    rtld_fini=<optimized out>, stack_end=0x7ffdd5fcecf8)
+    at ../csu/libc-start.c:308
+        self = <optimized out>
+        result = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {7046336, 
+                4242294359204587454, 6271856, 140728193576192, 0, 0, 
+                -4241260792063170626, -4305086302947743810}, 
+              mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x2, 
+              0x7ffdd5fced08}, data = {prev = 0x0, cleanup = 0x0, 
+              canceltype = 2}}}
+        not_first_call = <optimized out>
+#79 0x00000000005fb39e in _start ()
+No symbol table info available.
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+Cython backtrace
+----------------
+#0  0x00007f4f75837c20 in __GI___wait4 () at /build/glibc-SzIz7B/glibc-2.31/posix/../sysdeps/unix/sysv/linux/wait4.c:27
+#1  0x0000000000000000 in ?? ()
+#2  0x0000000000000000 in ?? ()
+#3  0x0000000000000000 in ?? ()
+#4  0x00007f4f7598e3e0 in __restore_rt ()
+#5  0x0000000000000000 in ?? ()
+#6  0x0000000000000000 in QPainter::setBrushOrigin(QPointF const&) ()
+#7  0x0000000000000000 in QItemDelegate::drawBackground(QPainter*, QStyleOptionViewItem const&, QModelIndex const&) const ()
+#8  0x0000000000000000 in QItemDelegate::paint(QPainter*, QStyleOptionViewItem const&, QModelIndex const&) const ()
+#9  0x0000000000000000 in ?? ()
+#10 0x0000000000000000 in ?? ()
+#11 0x0000000000000000 in QTableView::paintEvent(QPaintEvent*) ()
+#12 0x0000000000000000 in ?? ()
+#13 0x0000000000000000 in QWidget::event(QEvent*) ()
+#14 0x0000000000000000 in QFrame::event(QEvent*) ()
+#15 0x0000000000000000 in QAbstractItemView::viewportEvent(QEvent*) ()
+#16 0x0000000000000000 in ?? ()
+#17 0x0000000000000000 in QCoreApplicationPrivate::sendThroughObjectEventFilters(QObject*, QEvent*) ()
+#18 0x0000000000000000 in QApplicationPrivate::notify_helper(QObject*, QEvent*) ()
+#19 0x0000000000000000 in QApplication::notify(QObject*, QEvent*) ()
+#20 0x0000000000000000 in ?? ()
+#21 0x0000000000000000 in QCoreApplication::notifyInternal2(QObject*, QEvent*) ()
+#22 0x0000000000000000 in QWidgetPrivate::sendPaintEvent(QRegion const&) ()
+#23 0x0000000000000000 in QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) ()
+#24 0x0000000000000000 in QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) ()
+#25 0x0000000000000000 in QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) ()
+#26 0x0000000000000000 in QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) ()
+#27 0x0000000000000000 in QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) ()
+#28 0x0000000000000000 in QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) ()
+#29 0x0000000000000000 in QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) ()
+#30 0x0000000000000000 in QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) ()
+#31 0x0000000000000000 in QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) ()
+#32 0x0000000000000000 in QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) ()
+#33 0x0000000000000000 in QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) ()
+#34 0x0000000000000000 in QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) ()
+#35 0x0000000000000000 in QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) ()
+#36 0x0000000000000000 in QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) ()
+#37 0x0000000000000000 in QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) ()
+#38 0x0000000000000000 in QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) ()
+#39 0x0000000000000000 in QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) ()
+#40 0x0000000000000000 in QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) ()
+#41 0x0000000000000000 in QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) ()
+#42 0x0000000000000000 in ?? ()
+#43 0x0000000000000000 in ?? ()
+#44 0x0000000000000000 in ?? ()
+#45 0x0000000000000000 in ?? ()
+#46 0x0000000000000000 in QApplicationPrivate::notify_helper(QObject*, QEvent*) ()
+#47 0x0000000000000000 in QApplication::notify(QObject*, QEvent*) ()
+#48 0x0000000000000000 in ?? ()
+#49 0x0000000000000000 in QCoreApplication::notifyInternal2(QObject*, QEvent*) ()
+#50 0x0000000000000000 in QGuiApplicationPrivate::processExposeEvent(QWindowSystemInterfacePrivate::ExposeEvent*) ()
+#51 0x0000000000000000 in QGuiApplicationPrivate::processWindowSystemEvent(QWindowSystemInterfacePrivate::WindowSystemEvent*) ()
+#52 0x0000000000000000 in QWindowSystemInterface::sendWindowSystemEvents(QFlags<QEventLoop::ProcessEventsFlag>) ()
+#53 0x0000000000000000 in ?? ()
+#54 0x00007f4f685c3f00 in g_main_context_dispatch ()
+#55 0x0000000000000000 in ?? ()
+#56 0x00007f4f685c4470 in g_main_context_iteration ()
+#57 0x0000000000000000 in QEventDispatcherGlib::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) ()
+#58 0x0000000000000000 in QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) ()
+#59 0x0000000000000000 in QCoreApplication::exec() ()
+#60 0x0000000000000000 in ?? ()
+#61 0x00000000005f6430 in PyCFunction_Call ()
+#62 0x00000000005f6dc0 in _PyObject_MakeTpCall ()
+#63 0x000000000056b2d0 in _PyEval_EvalFrameDefault ()
+#64 0x00000000005f6680 in _PyFunction_Vectorcall ()
+#65 0x000000000056b2d0 in _PyEval_EvalFrameDefault ()
+#66 0x00000000005f6680 in _PyFunction_Vectorcall ()
+#67 0x000000000056b2d0 in _PyEval_EvalFrameDefault ()
+#68 0x00000000005f6680 in _PyFunction_Vectorcall ()
+#69 0x000000000056b2d0 in _PyEval_EvalFrameDefault ()
+#70 0x0000000000569a80 in _PyEval_EvalCodeWithName ()
+#71 0x000000000068e790 in PyEval_EvalCode ()
+#72 0x0000000000000000 in ?? ()
+#73 0x0000000000000000 in ?? ()
+#74 0x0000000000000000 in ?? ()
+#75 0x0000000000680c20 in PyRun_SimpleFileExFlags ()
+#76 0x00000000006b7f10 in Py_RunMain ()
+#77 0x00000000006b8480 in Py_BytesMain ()
+#78 0x00007f4f75778f90 in __libc_start_main () at /build/glibc-SzIz7B/glibc-2.31/csu/../csu/libc-start.c:308
+#79 0x00000000005fb370 in _start ()
+
+[Inferior 1 (process 76694) detached]
+27	../sysdeps/unix/sysv/linux/wait4.c: No such file or directory.

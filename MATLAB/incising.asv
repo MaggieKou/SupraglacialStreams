@@ -1,0 +1,40 @@
+function [c,f,s] = incising(x,t,u,dudx)
+c = -1;
+f = 0;
+s = (dudx)^(6/5)/(sqrt(1+(dudx)^2));
+end
+
+function h0 = riveric(x,a, b, c, d) % initializes the initial conditions for h
+h0 = a*x^3 + b*x^2 + c*x + d;
+end
+
+function h_bc = riverbc(x, wt, h0, R, del_t) %initializes the boundary conditions for h
+Cf = 0.1;
+g = 9.8;
+Q = 4;
+w0 = -(g*(h0(1)-h0(0))/((x(1)-x(0))*Cf*R*Q^2))^(-1/5); %initial width per BC
+w = zeros(len(wt));
+w(0) = q0;
+
+%initializes w
+for i = 2:len(wt)
+    w(i) = w(i-1) + del_t*wt(i);
+end
+
+S_bc = Cf*R*Q^2/(g*w.^5); 
+h_bc = zeros(len(wt));
+h_bc(0) = h0(0);
+for i = 2:len(h_bc)
+    h_bc(i) = h_bc(i-1) + del_t*(S_bc(i+1)+S_bc(i-1))/2;
+end
+end
+
+%initialization 
+x = linspace(0,10,1000);
+t = linspace(0,10,1000);
+
+%IC
+a = 0;
+b = -2;
+c = 0;
+d 
